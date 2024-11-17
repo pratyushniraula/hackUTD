@@ -1,0 +1,86 @@
+:root {
+  --max-width: 1200px;
+  --border-radius: 20px;
+  --font-main: 'Orbitron', sans-serif;
+  
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 20;
+  --background-end-rgb: 0, 0, 0;
+  
+  --primary-glow: radial-gradient(circle, rgba(0, 255, 255, 0.5), rgba(0, 255, 255, 0) 70%);
+  --secondary-glow: linear-gradient(135deg, rgba(0, 255, 255, 0.4) 0%, rgba(0, 255, 255, 0.2) 100%);
+  
+  --tile-start-rgb: 25, 25, 45;
+  --tile-end-rgb: 10, 10, 20;
+  --tile-border: conic-gradient(from 180deg at 50% 50%, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0) 70%);
+  
+  --callout-rgb: 30, 30, 40;
+  --callout-border-rgb: 80, 80, 100;
+  --card-rgb: 40, 40, 60;
+  --card-border-rgb: 70, 70, 90;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 10, 10, 20;
+    --background-end-rgb: 0, 0, 0;
+    
+    --primary-glow: radial-gradient(circle, rgba(0, 255, 255, 0.6), rgba(0, 255, 255, 0) 70%);
+    --secondary-glow: linear-gradient(135deg, rgba(0, 255, 255, 0.6) 0%, rgba(0, 255, 255, 0.3) 100%);
+    
+    --tile-start-rgb: 20, 20, 40;
+    --tile-end-rgb: 5, 5, 15;
+    --tile-border: conic-gradient(from 180deg at 50% 50%, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0) 70%);
+    
+    --callout-rgb: 20, 20, 30;
+    --callout-border-rgb: 60, 60, 80;
+    --card-rgb: 30, 30, 50;
+    --card-border-rgb: 60, 60, 80;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-main);
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, rgba(var(--background-start-rgb), 0.8), rgba(var(--background-end-rgb), 1));
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+}
+
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 255, 255, 0.5) transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
